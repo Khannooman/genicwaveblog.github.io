@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Blog Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-2">Welcome to My AI Blog</h1>
+            <p class="text-lg opacity-80">Exploring the frontiers of artificial intelligence and language models</p>
+        </div>
+    </header>
+
+    <!-- Blog List Section -->
+    <section class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-8 text-center">Featured Blogs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Blog Card 1: How LLMs Work -->
+            <a href="llm.html" class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">How Large Language Models Work</h3>
+                    <p class="text-gray-600 mb-4">A deep dive into tokenization, attention mechanisms, pretraining, fine-tuning, and alignment.</p>
+                    <span class="text-blue-600 font-semibold hover:underline">Read More &rarr;</span>
+                </div>
+            </a>
+            <!-- Blog Card 2: Evolution of RAG -->
+            <a href="rag.html" class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">The Evolution of Retrieval-Augmented Generation</h3>
+                    <p class="text-gray-600 mb-4">From basic RAG to advanced methodologies like Corrective, Agentic, and Graph RAG.</p>
+                    <span class="text-blue-600 font-semibold hover:underline">Read More &rarr;</span>
+                </div>
+            </a>
+            <!-- Add more blog cards here as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2025 Your Blog Hub. All rights reserved.</p>
+            <p class="mt-2 text-sm opacity-80">Built with GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script>
+        // Optional: Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
